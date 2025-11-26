@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InstantRAMS (Pay-Per-Doc)
 
-## Getting Started
+## Concept
+A "Vending machine" for UK Health & Safety documents. Users can instantly generate and purchase essential documents like RAMS (Risk Assessment Method Statements) and COSHH (Control of Substances Hazardous to Health) Assessments without the need for accounts or subscriptions.
 
-First, run the development server:
+## Core Features
+*   **Instant Document Generation:** Generate UK Health & Safety documents on demand.
+*   **Pay-Per-Document Model:** Simple, one-time payment for each document.
+*   **Client-Side PDF Generation:** Efficient and cost-effective document creation.
+*   **Official UK Terminology:** Use precise terms such as "COSHH Assessment" and "HSE Guidelines."
+*   **Boringly Official Aesthetic:** Output PDFs adhere to a formal, official look with Times New Roman, tables, and signature boxes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technology Stack
+*   **Frontend:** Next.js (hosted on Vercel for optimal performance and scalability).
+*   **Database:** None. All ephemeral state is managed client-side (URL or local storage) until payment is processed.
+*   **Payments:** Stripe (integrated for secure and straightforward one-time payments).
+*   **PDF Engine:** `jspdf` or `react-pdf` (for client-side PDF generation, reducing server load and costs).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Guiding Principles
+1.  **No User Accounts:** The service is designed for immediate use. There is no "Sign Up" or account management; the process is purely "Create & Buy."
+2.  **Professional Output:** All generated PDF documents must project a "boringly official" appearance, utilizing standard elements like Times New Roman font, structured tables, and a designated signature box, aligning with UK regulatory expectations.
+3.  **UK-Specific Language:** Strict adherence to UK Health & Safety terminology is mandatory, including phrases like "COSHH Assessment" and references to "HSE Guidelines."
