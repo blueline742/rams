@@ -3,11 +3,11 @@ import { TradeData } from '@/types';
 export const tradeData: TradeData = {
   'Bricklayer': {
     hazards: [
-      { hazard: 'Cement Dermatitis (Contact with wet cement)', controlMeasure: 'Wear alkali-resistant nitrile gloves and apply barrier cream before starting work.' },
-      { hazard: 'Respirable Crystalline Silica (RCS) Dust', controlMeasure: 'Use water suppression systems when cutting bricks and wear FFP3 respiratory protection.' },
-      { hazard: 'Working at Height (Falls from scaffolding)', controlMeasure: 'Ensure scaffolding is erected by competent persons with guardrails and toe boards installed.' },
-      { hazard: 'Manual Handling (Repetitive lifting)', controlMeasure: 'Use mechanical aids (e.g., block splitters, hods) and rotate tasks to reduce strain.' },
-      { hazard: 'Falling Objects', controlMeasure: 'Wear safety helmets (hard hats) at all times and establish exclusion zones below work areas.' }
+      { hazard: 'Cement Dermatitis (Contact with wet cement)', controlMeasure: 'Wear alkali-resistant nitrile gloves and apply barrier cream before starting work.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 },
+      { hazard: 'Respirable Crystalline Silica (RCS) Dust', controlMeasure: 'Use water suppression systems when cutting bricks and wear FFP3 respiratory protection.', likelihood: 4, severity: 4, initialRisk: 16, residualRisk: 4 },
+      { hazard: 'Working at Height (Falls from scaffolding)', controlMeasure: 'Ensure scaffolding is erected by competent persons with guardrails and toe boards installed.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 },
+      { hazard: 'Manual Handling (Repetitive lifting)', controlMeasure: 'Use mechanical aids (e.g., block splitters, hods) and rotate tasks to reduce strain.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 4 },
+      { hazard: 'Falling Objects', controlMeasure: 'Wear safety helmets (hard hats) at all times and establish exclusion zones below work areas.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 }
     ],
     ppe: ['Hard Hat', 'Safety Boots (Steel Toe)', 'Hi-Vis Vest', 'Gloves (Nitrile/Grip)', 'Eye Protection', 'FFP3 Mask'],
     tools: ['Trowel', 'Spirit Level', 'Cement Mixer', 'Shovel', 'Brick Hammer', 'Line & Pins', 'Block Splitter'],
@@ -551,6 +551,213 @@ export const tradeData: TradeData = {
       '8. Fell the main trunk (if removal) or shape crown.',
       '9. Clear all debris and blow down the area.',
       '10. Remove equipment and sign off.'
+    ]
+  },
+  'Cladding Installer': {
+    hazards: [
+      { hazard: 'Falls from Height', controlMeasure: 'Use scaffolding with edge protection; wear harness when needed.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 },
+      { hazard: 'Falling Materials', controlMeasure: 'Hoist materials using material hoist; secure panels before releasing.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Cuts from Metal Edges', controlMeasure: 'Wear cut-resistant gloves and handle panels carefully.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 },
+      { hazard: 'Adverse Weather (Wind)', controlMeasure: 'Do not fix large panels in winds above 20mph; secure unfixed panels.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Fire Risk (Post-Grenfell Compliance)', controlMeasure: 'Use only A1/A2-rated non-combustible materials as per Building Regs.', likelihood: 1, severity: 5, initialRisk: 5, residualRisk: 1 }
+    ],
+    ppe: ['Hard Hat', 'Safety Boots', 'Gloves (Cut-Resistant)', 'Safety Harness', 'Hi-Vis Vest', 'Eye Protection'],
+    tools: ['Rivet Gun', 'Nibbler', 'Drill/Driver', 'Spirit Level', 'Measuring Tape', 'Circular Saw', 'Material Hoist'],
+    sequence: [
+      '1. Check drawings and specifications for panel types.',
+      '2. Inspect substrate and fix support rails/battens.',
+      '3. Install insulation boards if required.',
+      '4. Hoist cladding panels to working level.',
+      '5. Fix panels starting from bottom corner.',
+      '6. Ensure correct overlap and alignment.',
+      '7. Seal joints with fire-rated sealant.',
+      '8. Install trims, flashings, and cappings.',
+      '9. Check all fixings are secure.',
+      '10. Clear site and dispose of offcuts.'
+    ]
+  },
+  'Drainage Engineer': {
+    hazards: [
+      { hazard: 'Confined Space Entry (Manholes)', controlMeasure: 'Gas test before entry; use ventilation; have top-side attendant.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 },
+      { hazard: 'Biological Hazards (Sewage)', controlMeasure: 'Wear waterproof gloves and coveralls; wash hands thoroughly; hepatitis vaccination.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Leptospirosis (Weil\'s Disease)', controlMeasure: 'Cover cuts with waterproof plasters; avoid hand-to-mouth contact.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 },
+      { hazard: 'Slips and Trips (Wet surfaces)', controlMeasure: 'Wear slip-resistant boots; use barriers and signage.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 },
+      { hazard: 'Traffic (Working in roads)', controlMeasure: 'Use Chapter 8 traffic management; wear hi-vis; use barriers.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 }
+    ],
+    ppe: ['Hard Hat', 'Safety Boots (Waterproof)', 'Gloves (Waterproof)', 'Hi-Vis Coveralls', 'Face Shield', 'Respirator'],
+    tools: ['Drain Rods', 'CCTV Camera', 'High-Pressure Jetter', 'Manhole Keys', 'Gas Detector', 'Shovel', 'Channelling Tool'],
+    sequence: [
+      '1. Set up traffic management and signage.',
+      '2. Locate manholes and remove covers.',
+      '3. Conduct gas test (LEL, O2, H2S).',
+      '4. Insert CCTV camera to inspect drains.',
+      '5. Identify blockage or damage.',
+      '6. Clear blockage using rods or jetter.',
+      '7. Re-inspect with camera to confirm clearance.',
+      '8. Repair or replace damaged pipework if needed.',
+      '9. Test flow and reinstate covers.',
+      '10. Complete drainage report and clean equipment.'
+    ]
+  },
+  'Plant Operator': {
+    hazards: [
+      { hazard: 'Overturning (Excavators/Dumpers)', controlMeasure: 'Check ground stability; do not exceed safe working load; use outriggers.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 },
+      { hazard: 'Striking Underground Services', controlMeasure: 'Obtain CAT scan; hand dig trial holes; use service plans.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 },
+      { hazard: 'Crushing/Run-over', controlMeasure: 'Use banksman; reversing alarms and cameras; exclusion zones.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 },
+      { hazard: 'Vibration (HAVS)', controlMeasure: 'Limit exposure time; use well-maintained equipment; anti-vibration gloves.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 4 },
+      { hazard: 'Noise Exposure', controlMeasure: 'Wear ear defenders; limit time in cab without hearing protection.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 }
+    ],
+    ppe: ['Hard Hat', 'Safety Boots', 'Hi-Vis Vest', 'Gloves (Anti-Vibration)', 'Ear Defenders', 'Seat Belt'],
+    tools: ['Excavator', 'Dumper', 'Telehandler', 'CAT Scanner', 'Two-Way Radio', 'Slew Ring Grease Gun'],
+    sequence: [
+      '1. Conduct daily plant checks (fluid levels, leaks, lights).',
+      '2. Obtain permits and check for underground services.',
+      '3. Set up exclusion zones and barriers.',
+      '4. Start machine and check all controls.',
+      '5. Communicate with banksman via radio or hand signals.',
+      '6. Begin excavation or lifting operations.',
+      '7. Stockpile excavated material safely.',
+      '8. Avoid overhead cables and maintain safe distance.',
+      '9. Shut down machine and secure on completion.',
+      '10. Complete plant logbook.'
+    ]
+  },
+  'Asbestos Removal': {
+    hazards: [
+      { hazard: 'Asbestos Fibre Inhalation', controlMeasure: 'Full RPE (Powered respirator); wet methods; controlled area; air monitoring.', likelihood: 5, severity: 5, initialRisk: 25, residualRisk: 3 },
+      { hazard: 'Contamination Spread', controlMeasure: 'Use decontamination unit; 3-stage airlock; double-bag waste.', likelihood: 4, severity: 5, initialRisk: 20, residualRisk: 3 },
+      { hazard: 'Confined Spaces', controlMeasure: 'Ventilation in enclosure; emergency rescue plan; buddy system.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 },
+      { hazard: 'Heat Stress (Full PPE)', controlMeasure: 'Regular breaks; hydration; monitor workers; reduce shift length.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 4 },
+      { hazard: 'Sharps (Asbestos-containing materials)', controlMeasure: 'Wet materials before breaking; use appropriate tools; wear puncture-resistant gloves.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 }
+    ],
+    ppe: ['Full-Face Powered Respirator (TH2P)', 'Disposable Overalls (Type 5)', 'Rubber Boots', 'Double Gloves', 'Duct Tape'],
+    tools: ['HEPA Vacuum', 'Spray Bottle', 'Encapsulant', 'Asbestos Waste Bags', 'Air Sampling Pump', 'Decon Unit', 'Neg Pressure Unit (NPU)'],
+    sequence: [
+      '1. Notify HSE and obtain license (for notifiable work).',
+      '2. Set up 3-stage decontamination unit.',
+      '3. Build enclosure with polythene sheeting.',
+      '4. Install negative pressure unit (NPU) to create -20Pa.',
+      '5. Conduct smoke test to check integrity.',
+      '6. Don full RPE and protective clothing.',
+      '7. Wet asbestos materials with surfactant.',
+      '8. Remove asbestos using hand tools (no power tools).',
+      '9. Double-bag waste and seal with tape.',
+      '10. Decontaminate, shower, and conduct 4-stage clearance test.'
+    ]
+  },
+  'Insulation Installer': {
+    hazards: [
+      { hazard: 'Skin Irritation (Fibreglass)', controlMeasure: 'Wear long sleeves and gloves; wash hands before eating; barrier cream.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 },
+      { hazard: 'Respiratory Irritation (Fibres/Dust)', controlMeasure: 'Wear FFP2 mask; ensure good ventilation.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Working in Confined Spaces (Lofts)', controlMeasure: 'Use adequate lighting; check joists before walking; do not step between joists.', likelihood: 3, severity: 3, initialRisk: 9, residualRisk: 3 },
+      { hazard: 'Working at Height', controlMeasure: 'Use stable platforms; loft boards; do not overreach.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Heat Stress (Loft work in summer)', controlMeasure: 'Take regular breaks; stay hydrated; work during cooler hours.', likelihood: 3, severity: 2, initialRisk: 6, residualRisk: 2 }
+    ],
+    ppe: ['Disposable Overalls', 'Gloves', 'Dust Mask (FFP2)', 'Hard Hat (in lofts)', 'Knee Pads', 'Eye Protection'],
+    tools: ['Utility Knife', 'Insulation Saw', 'Staple Gun', 'Measuring Tape', 'Loft Boards', 'Work Light'],
+    sequence: [
+      '1. Survey the area and measure dimensions.',
+      '2. Check for existing insulation and asbestos.',
+      '3. Clear the area and lay loft boards.',
+      '4. Cut insulation to size.',
+      '5. Install insulation between joists (avoid compressing).',
+      '6. Ensure no gaps or cold bridges.',
+      '7. Install vapour barrier if required.',
+      '8. Insulate around pipes and cables (leave clearance for heat).',
+      '9. Check depth meets building regulations (270mm typical).',
+      '10. Clear debris and vacuum the area.'
+    ]
+  },
+  'Shopfitter': {
+    hazards: [
+      { hazard: 'Manual Handling (Display units)', controlMeasure: 'Use trolleys and lifting equipment; work in teams.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Cuts (Glass/Sharp materials)', controlMeasure: 'Wear cut-resistant gloves; use suction lifters for glass.', likelihood: 3, severity: 3, initialRisk: 9, residualRisk: 2 },
+      { hazard: 'Dust from Cutting/Drilling', controlMeasure: 'Use extraction on power tools; wear FFP2 mask.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 },
+      { hazard: 'Working at Height (High-level shelving)', controlMeasure: 'Use podiums or MEWPs; never use step ladders for prolonged work.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Electrical Work (Lighting)', controlMeasure: 'Isolate power; only qualified persons to wire lighting.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 }
+    ],
+    ppe: ['Safety Boots', 'Gloves (Cut-Resistant)', 'Dust Mask', 'Eye Protection', 'Hi-Vis Vest', 'Knee Pads'],
+    tools: ['Mitre Saw', 'Track Saw', 'Drill/Driver', 'Spirit Level', 'Pin Gun', 'Glass Suction Lifter', 'Sack Truck'],
+    sequence: [
+      '1. Review shop drawings and specifications.',
+      '2. Measure site and mark out positions.',
+      '3. Install wall panelling and slatwall.',
+      '4. Build and install display units.',
+      '5. Fit shelving and brackets.',
+      '6. Install counters and tills.',
+      '7. Fit mirrors and glass panels.',
+      '8. Install signage and branding.',
+      '9. Connect lighting (by qualified electrician).',
+      '10. Final clean and handover.'
+    ]
+  },
+  'Signage Installer': {
+    hazards: [
+      { hazard: 'Working at Height (High-level signs)', controlMeasure: 'Use MEWPs or scaffolding; wear harness when required.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 },
+      { hazard: 'Electrical Shock (Illuminated signs)', controlMeasure: 'Isolate power before wiring; qualified electrician only.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 },
+      { hazard: 'Manual Handling (Large panels)', controlMeasure: 'Use lifting equipment or work in teams; never lift alone.', likelihood: 3, severity: 3, initialRisk: 9, residualRisk: 2 },
+      { hazard: 'Cuts from Sharp Edges (Aluminium)', controlMeasure: 'Wear cut-resistant gloves; file sharp edges.', likelihood: 3, severity: 2, initialRisk: 6, residualRisk: 2 },
+      { hazard: 'Traffic (Roadside signs)', controlMeasure: 'Use Chapter 8 traffic management; wear hi-vis; barriers.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 }
+    ],
+    ppe: ['Hard Hat', 'Safety Boots', 'Gloves (Cut-Resistant)', 'Hi-Vis Vest', 'Safety Harness', 'Eye Protection'],
+    tools: ['Drill/Driver', 'Rivet Gun', 'Spirit Level', 'Measuring Tape', 'Silicone Gun', 'Step Ladder', 'MEWP'],
+    sequence: [
+      '1. Survey site and check sign positions.',
+      '2. Prepare wall surface (clean and fill holes).',
+      '3. Mark fixing positions using template.',
+      '4. Drill holes and insert fixings.',
+      '5. Lift sign into position.',
+      '6. Secure sign to wall with bolts.',
+      '7. Wire up illumination (if applicable).',
+      '8. Test sign is secure and level.',
+      '9. Seal edges with silicone if needed.',
+      '10. Clear waste and take photos for records.'
+    ]
+  },
+  'Curtain Walling Installer': {
+    hazards: [
+      { hazard: 'Falls from Height', controlMeasure: 'Use edge protection or harness system; work from inside where possible.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 },
+      { hazard: 'Glass Breakage/Cuts', controlMeasure: 'Use vacuum lifters for glass; wear cut-resistant gloves; safety glasses.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Falling Materials (Glass/Panels)', controlMeasure: 'Secure all materials before releasing; exclusion zones below.', likelihood: 2, severity: 5, initialRisk: 10, residualRisk: 2 },
+      { hazard: 'Manual Handling (Heavy mullions)', controlMeasure: 'Use material hoist; work in teams; mechanical lifting aids.', likelihood: 3, severity: 3, initialRisk: 9, residualRisk: 2 },
+      { hazard: 'Adverse Weather (Wind)', controlMeasure: 'Do not install glass in winds above 20mph.', likelihood: 3, severity: 4, initialRisk: 12, residualRisk: 3 }
+    ],
+    ppe: ['Hard Hat', 'Safety Boots', 'Gloves (Cut-Resistant)', 'Safety Harness', 'Hi-Vis Vest', 'Safety Glasses'],
+    tools: ['Glass Suction Lifter', 'Torque Wrench', 'Spirit Level', 'Silicone Gun', 'MEWP/Hoist', 'Setting Blocks'],
+    sequence: [
+      '1. Check drawings and specifications.',
+      '2. Survey structure and check tolerances.',
+      '3. Fix support brackets to structure.',
+      '4. Install mullions (vertical members).',
+      '5. Install transoms (horizontal members).',
+      '6. Check alignment and plumb.',
+      '7. Hoist glazing units to working level.',
+      '8. Install glass using suction lifters.',
+      '9. Seal all joints with weather seal.',
+      '10. Conduct water test and make good.'
+    ]
+  },
+  'Steel Fixer': {
+    hazards: [
+      { hazard: 'Cuts and Punctures (Rebar ends)', controlMeasure: 'Wear gloves; cap exposed bar ends; never sit on rebar.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Manual Handling (Heavy bars)', controlMeasure: 'Use mechanical lifting for bars over 25kg; work in teams.', likelihood: 4, severity: 3, initialRisk: 12, residualRisk: 3 },
+      { hazard: 'Trips over Rebar', controlMeasure: 'Keep work area tidy; highlight trip hazards; wear ankle-supporting boots.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 },
+      { hazard: 'Working at Height (Elevated slabs)', controlMeasure: 'Use edge protection; safety nets; secure walkways.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 },
+      { hazard: 'Hand/Arm Injuries (Tying wire)', controlMeasure: 'Use automatic bar tiers; wear heavy-duty gloves.', likelihood: 4, severity: 2, initialRisk: 8, residualRisk: 2 }
+    ],
+    ppe: ['Hard Hat', 'Safety Boots (Ankle Support)', 'Heavy-Duty Gloves', 'Hi-Vis Vest', 'Knee Pads', 'Eye Protection'],
+    tools: ['Bar Bender', 'Bar Cutter', 'Tying Wire', 'Automatic Tier Gun', 'Rebar Caps', 'Spacers', 'Tape Measure'],
+    sequence: [
+      '1. Check drawings for bar schedule.',
+      '2. Cut and bend rebar to specification.',
+      '3. Lay out bottom mat of reinforcement.',
+      '4. Tie bars at intersections using wire.',
+      '5. Install spacers to maintain concrete cover.',
+      '6. Build up steel cage for beams/columns.',
+      '7. Fix top mat of reinforcement.',
+      '8. Cap all exposed bar ends.',
+      '9. Check alignment and levels.',
+      '10. Sign off for concrete pour.'
     ]
   }
 };

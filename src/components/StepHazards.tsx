@@ -13,7 +13,12 @@ interface StepHazardsProps {
 }
 
 export default function StepHazards({ trade, selectedHazards, onToggle, onControlMeasureChange, onHazardUpdate, addCustomHazard }: StepHazardsProps) {
-    const [customHazardInput, setCustomHazardInput] = useState({ hazard: '', controlMeasure: '' });
+    const [customHazardInput, setCustomHazardInput] = useState({
+        hazard: '',
+        controlMeasure: '',
+        likelihood: 3,
+        severity: 3
+    });
     const [showCustomForm, setShowCustomForm] = useState(false);
 
     const tradeHazards = tradeData[trade]?.hazards || [];
@@ -21,8 +26,13 @@ export default function StepHazards({ trade, selectedHazards, onToggle, onContro
     const handleCustomSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (customHazardInput.hazard && customHazardInput.controlMeasure) {
-            addCustomHazard(customHazardInput);
-            setCustomHazardInput({ hazard: '', controlMeasure: '' });
+            const initialRisk = customHazardInput.likelihood * customHazardInput.severity;
+            addCustomHazard({
+                ...customHazardInput,
+                initialRisk,
+                residualRisk: Math.max(1, Math.floor(initialRisk / 2))
+            });
+            setCustomHazardInput({ hazard: '', controlMeasure: '', likelihood: 3, severity: 3 });
             setShowCustomForm(false);
         }
     };
@@ -161,6 +171,47 @@ export default function StepHazards({ trade, selectedHazards, onToggle, onContro
                                 required
                             />
                         </div>
+
+                        {/* Risk Assessment */}
+                        <div className="grid grid-cols-3 gap-3 bg-white p-3 rounded border border-gray-200">
+                            <div>
+                                <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Likelihood (1-5)</label>
+                                <select
+                                    value={customHazardInput.likelihood}
+                                    onChange={(e) => setCustomHazardInput({ ...customHazardInput, likelihood: parseInt(e.target.value) })}
+                                    className="w-full p-2 text-sm border rounded"
+                                >
+                                    <option value="1">1 - Rare</option>
+                                    <option value="2">2 - Unlikely</option>
+                                    <option value="3">3 - Possible</option>
+                                    <option value="4">4 - Likely</option>
+                                    <option value="5">5 - Certain</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Severity (1-5)</label>
+                                <select
+                                    value={customHazardInput.severity}
+                                    onChange={(e) => setCustomHazardInput({ ...customHazardInput, severity: parseInt(e.target.value) })}
+                                    className="w-full p-2 text-sm border rounded"
+                                >
+                                    <option value="1">1 - Minor</option>
+                                    <option value="2">2 - Moderate</option>
+                                    <option value="3">3 - Serious</option>
+                                    <option value="4">4 - Major</option>
+                                    <option value="5">5 - Fatal</option>
+                                </select>
+                            </div>
+                            <div className="text-center">
+                                <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Risk Score</label>
+                                <div className={`font-bold text-2xl mt-1 ${(customHazardInput.likelihood * customHazardInput.severity) >= 15 ? 'text-red-600' :
+                                    (customHazardInput.likelihood * customHazardInput.severity) >= 8 ? 'text-orange-500' : 'text-green-600'
+                                    }`}>
+                                    {customHazardInput.likelihood * customHazardInput.severity}
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="flex gap-2 justify-end">
                             <button
                                 type="button"
@@ -173,7 +224,7 @@ export default function StepHazards({ trade, selectedHazards, onToggle, onContro
                                 type="submit"
                                 className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
                             >
-                                Add
+                                Add Hazard
                             </button>
                         </div>
                     </div>

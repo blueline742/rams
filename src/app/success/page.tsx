@@ -25,8 +25,8 @@ function SuccessContent() {
   const handleDownload = () => {
     const savedData = localStorage.getItem('ramsData');
     if (savedData) {
-      const { trade, hazards, ppe, tools, methodSteps, details } = JSON.parse(savedData);
-      const doc = generatePDF(trade, hazards, ppe, tools, methodSteps, details);
+      const { trade, hazards, ppe, tools, methodSteps, details, signature } = JSON.parse(savedData);
+      const doc = generatePDF(trade, hazards, ppe, tools, methodSteps, details, signature);
       doc.save(`RAMS-${details.clientName || 'Document'}.pdf`);
     } else {
       alert('Document data not found. Please recreate the document.');

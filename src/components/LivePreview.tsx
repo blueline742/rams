@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hazard, Details } from '@/types';
+import { Hazard, Details, Signature } from '@/types';
 
 interface LivePreviewProps {
     trade: string;
@@ -8,9 +8,10 @@ interface LivePreviewProps {
     tools: string[];
     methodSteps: string[];
     details: Details;
+    signature?: Signature;
 }
 
-export default function LivePreview({ trade, hazards, ppe = [], tools = [], methodSteps = [], details }: LivePreviewProps) {
+export default function LivePreview({ trade, hazards, ppe = [], tools = [], methodSteps = [], details, signature }: LivePreviewProps) {
     return (
         <div className="bg-white shadow-lg min-h-[29.7cm] w-full p-[2cm] text-[12pt] font-serif text-black relative select-none print:select-auto">
             {/* Watermark */}
@@ -167,32 +168,75 @@ export default function LivePreview({ trade, hazards, ppe = [], tools = [], meth
 
             {/* Sign Off Section */}
             <div className="mt-12 break-inside-avoid">
-                <h3 className="font-bold uppercase border-b border-black mb-4 text-sm">Declaration</h3>
+                <h3 className="font-bold uppercase border-b border-black mb-4 text-sm">Declaration & Signature</h3>
                 <p className="mb-6 text-sm text-justify">
                     I confirm that I have read and understood the method statement, risk assessment, and emergency procedures above. I agree to work in accordance with the control measures outlined to ensure the safety of myself and others.
                 </p>
 
                 <div className="border border-black p-4">
-                    <div className="grid grid-cols-2 gap-8 mb-8">
-                        <div>
-                            <div className="text-xs font-bold mb-8">Signed (Operative):</div>
-                            <div className="border-b border-black"></div>
+                    {signature && signature.name ? (
+                        <div className="space-y-4">
+                            <div className="text-xs font-bold mb-3">PREPARED BY:</div>
+                            <div className="border-b-2 border-gray-900 pb-2 mb-3" style={{ minHeight: '60px', position: 'relative' }}>
+                                <div
+                                    className="text-6xl text-blue-900 leading-none"
+                                    style={{
+                                        fontFamily: 'var(--font-signature), Dancing Script, cursive',
+                                        transform: 'rotate(-2deg) translateY(-5px)',
+                                        display: 'inline-block',
+                                        fontWeight: '700',
+                                        letterSpacing: '0.02em'
+                                    }}
+                                >
+                                    {signature.name}
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-4 text-xs">
+                                <div>
+                                    <div className="font-bold text-gray-700 mb-1">Position:</div>
+                                    <div className="text-gray-900">{signature.position}</div>
+                                    {signature.companyName && (
+                                        <>
+                                            <div className="font-bold text-gray-700 mb-1 mt-2">Company:</div>
+                                            <div className="text-gray-900">{signature.companyName}</div>
+                                        </>
+                                    )}
+                                </div>
+                                <div>
+                                    <div className="font-bold text-gray-700 mb-1">Date Signed:</div>
+                                    <div className="text-gray-900 text-base font-semibold">{signature.date}</div>
+                                </div>
+                            </div>
+                            <div className="mt-4 pt-3 border-t border-gray-300">
+                                <p className="text-xs text-gray-600 italic">
+                                    This electronic signature is legally binding under the Electronic Communications Act 2000
+                                </p>
+                            </div>
                         </div>
+                    ) : (
                         <div>
-                            <div className="text-xs font-bold mb-8">Date:</div>
-                            <div className="border-b border-black"></div>
+                            <div className="grid grid-cols-2 gap-8 mb-8">
+                                <div>
+                                    <div className="text-xs font-bold mb-8">Signed (Operative):</div>
+                                    <div className="border-b border-black"></div>
+                                </div>
+                                <div>
+                                    <div className="text-xs font-bold mb-8">Date:</div>
+                                    <div className="border-b border-black"></div>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-8">
+                                <div>
+                                    <div className="text-xs font-bold mb-8">Signed (Supervisor):</div>
+                                    <div className="border-b border-black"></div>
+                                </div>
+                                <div>
+                                    <div className="text-xs font-bold mb-8">Date:</div>
+                                    <div className="border-b border-black"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-8">
-                        <div>
-                            <div className="text-xs font-bold mb-8">Signed (Supervisor):</div>
-                            <div className="border-b border-black"></div>
-                        </div>
-                        <div>
-                            <div className="text-xs font-bold mb-8">Date:</div>
-                            <div className="border-b border-black"></div>
-                        </div>
-                    </div>
+                    )}
                 </div>
             </div>
 
