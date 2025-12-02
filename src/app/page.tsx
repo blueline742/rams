@@ -27,6 +27,9 @@ export default function Home() {
               <Link href="#trades" className="text-base font-medium text-slate-700 hover:text-blue-600 transition-colors">
                 Trades
               </Link>
+              <Link href="/blog" className="text-base font-medium text-slate-700 hover:text-blue-600 transition-colors">
+                Guide
+              </Link>
               <Link href="#pricing" className="text-base font-medium text-slate-700 hover:text-blue-600 transition-colors">
                 Pricing
               </Link>
@@ -70,6 +73,13 @@ export default function Home() {
                 className="block text-base font-medium text-slate-700 hover:text-blue-600 transition-colors py-2"
               >
                 Trades
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-base font-medium text-slate-700 hover:text-blue-600 transition-colors py-2"
+              >
+                Guide
               </Link>
               <Link
                 href="#pricing"
