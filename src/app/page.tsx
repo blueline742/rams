@@ -1,33 +1,97 @@
+'use client';
+
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Shield, FileText, Zap, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, FileText, Zap, Users, Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900">
       {/* Navigation */}
-      <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100">
+      <nav className="fixed w-full bg-white/95 backdrop-blur-md z-50 border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
-              <img src="/logo.jpg" alt="FastRAMS Logo" className="h-20 w-auto" />
-            </div>
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</Link>
-              <Link href="#trades" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Trades</Link>
-              <Link href="#pricing" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Pricing</Link>
+          <div className="flex justify-between items-center h-24">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <img src="/logo.jpg" alt="FastRAMS Logo" className="h-16 sm:h-20 w-auto" />
+              <span className="text-xl sm:text-2xl font-bold text-slate-900">FastRAMS</span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
+              <Link href="#features" className="text-base font-medium text-slate-700 hover:text-blue-600 transition-colors">
+                Features
+              </Link>
+              <Link href="#trades" className="text-base font-medium text-slate-700 hover:text-blue-600 transition-colors">
+                Trades
+              </Link>
+              <Link href="#pricing" className="text-base font-medium text-slate-700 hover:text-blue-600 transition-colors">
+                Pricing
+              </Link>
               <Link
                 href="/create"
-                className="bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200"
+                className="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:shadow-blue-200 transform hover:-translate-y-0.5"
+              >
+                Create Document
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-slate-900" />
+              ) : (
+                <Menu className="h-6 w-6 text-slate-900" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-slate-200 shadow-lg">
+            <div className="px-4 py-6 space-y-4">
+              <Link
+                href="#features"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-base font-medium text-slate-700 hover:text-blue-600 transition-colors py-2"
+              >
+                Features
+              </Link>
+              <Link
+                href="#trades"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-base font-medium text-slate-700 hover:text-blue-600 transition-colors py-2"
+              >
+                Trades
+              </Link>
+              <Link
+                href="#pricing"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-base font-medium text-slate-700 hover:text-blue-600 transition-colors py-2"
+              >
+                Pricing
+              </Link>
+              <Link
+                href="/create"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-700 transition-all shadow-lg mt-4"
               >
                 Create Document
               </Link>
             </div>
           </div>
-        </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <section className="relative pt-36 pb-20 lg:pt-52 lg:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           {/* Placeholder for generated image - will be replaced by actual image path */}
           <img
