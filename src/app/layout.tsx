@@ -22,10 +22,6 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   title: "FastRAMS - Professional RAMS Documents Generated in Minutes",
   description: "Create fully compliant Risk Assessments and Method Statements instantly. Trusted by UK tradespeople. Only £5 per document with instant PDF download.",
-  icons: {
-    icon: '/logo.jpg',
-    apple: '/logo.jpg',
-  },
 };
 
 export default function RootLayout({

@@ -9,7 +9,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <img src="/logo.jpg" alt="FastRAMS Logo" className="h-16 w-auto" />
+              <img src="/logo.jpg" alt="FastRAMS Logo" className="h-20 w-auto" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</Link>
@@ -211,7 +211,7 @@ export default function Home() {
       <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center text-white">
-            <img src="/logo.jpg" alt="FastRAMS Logo" className="h-12 w-auto" />
+            <img src="/logo.jpg" alt="FastRAMS Logo" className="h-16 w-auto" />
           </div>
           <div className="text-sm">
             © {new Date().getFullYear()} FastRAMS. All rights reserved.
