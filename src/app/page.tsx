@@ -272,13 +272,82 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center text-white">
-            <img src="/logo.jpg" alt="FastRAMS Logo" className="h-16 w-auto" />
+      <footer className="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            {/* Company Info */}
+            <div className="space-y-4">
+              <img src="/logo.jpg" alt="FastRAMS Logo" className="h-16 w-auto mb-4" />
+              <p className="text-sm leading-relaxed">
+                Professional RAMS documents for UK tradespeople. HSE compliant, instant delivery, no subscription required.
+              </p>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Services</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/create" className="text-sm hover:text-blue-400 transition-colors">Create RAMS</Link>
+                </li>
+                <li>
+                  <Link href="#trades" className="text-sm hover:text-blue-400 transition-colors">Supported Trades</Link>
+                </li>
+                <li>
+                  <Link href="#pricing" className="text-sm hover:text-blue-400 transition-colors">Pricing</Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Resources</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/blog" className="text-sm hover:text-blue-400 transition-colors">RAMS Guide</Link>
+                </li>
+                <li>
+                  <Link href="/blog/what-is-rams" className="text-sm hover:text-blue-400 transition-colors">What is RAMS?</Link>
+                </li>
+                <li>
+                  <Link href="/blog/hse-compliance" className="text-sm hover:text-blue-400 transition-colors">HSE Compliance</Link>
+                </li>
+                <li>
+                  <Link href="/blog/cdm-regulations" className="text-sm hover:text-blue-400 transition-colors">CDM 2015 Guide</Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal & Contact */}
+            <div>
+              <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Company</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/privacy" className="text-sm hover:text-blue-400 transition-colors">Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-sm hover:text-blue-400 transition-colors">Terms of Service</Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-sm hover:text-blue-400 transition-colors">Contact Us</Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="text-sm">
-            © {new Date().getFullYear()} FastRAMS. All rights reserved.
+
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm">
+              © {new Date().getFullYear()} FastRAMS. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6 text-sm">
+              <span>HSE Compliant</span>
+              <span>•</span>
+              <span>CDM 2015</span>
+              <span>•</span>
+              <span>Instant PDF</span>
+            </div>
           </div>
         </div>
       </footer>
