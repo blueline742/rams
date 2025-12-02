@@ -8,9 +8,9 @@ export default function Home() {
       <nav className="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex items-center gap-2">
-              <Shield className="h-8 w-8 text-blue-600" />
-              <span className="text-2xl font-bold tracking-tight text-slate-900">InstantRAMS</span>
+            <div className="flex items-center gap-3">
+              <img src="/logo.jpg" alt="FastRAMS Logo" className="h-12 w-auto" />
+              <span className="text-2xl font-bold tracking-tight text-slate-900">FastRAMS</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <Link href="#features" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Features</Link>
@@ -57,7 +57,7 @@ export default function Home() {
 
           <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
             Create fully compliant Risk Assessments and Method Statements instantly.
-            Trusted by UK tradespeople to secure contracts and ensure safety.
+            Trusted by UK tradespeople to secure contracts and ensure safety with FastRAMS.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -195,7 +195,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6">Ready to create your document?</h2>
           <p className="text-blue-100 text-xl mb-10">
-            Join thousands of tradespeople who save time and win work with InstantRAMS.
+            Join thousands of tradespeople who save time and win work with FastRAMS.
             Pay only when you're happy with the preview.
           </p>
           <Link
@@ -211,12 +211,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2 text-white">
-            <Shield className="h-6 w-6" />
-            <span className="font-bold text-lg">InstantRAMS</span>
+          <div className="flex items-center gap-3 text-white">
+            <img src="/logo.jpg" alt="FastRAMS Logo" className="h-8 w-auto" />
+            <span className="font-bold text-lg">FastRAMS</span>
           </div>
           <div className="text-sm">
-            © {new Date().getFullYear()} InstantRAMS. All rights reserved.
+            © {new Date().getFullYear()} FastRAMS. All rights reserved.
           </div>
         </div>
       </footer>
