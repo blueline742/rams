@@ -123,10 +123,10 @@ export default function LivePreview({ trade, hazards, ppe = [], tools = [], meth
                                     <td className="border border-black p-2 align-top">{h.controlMeasure}</td>
                                     <td className="border border-black p-2 text-center align-top">{h.likelihood || 1}</td>
                                     <td className="border border-black p-2 text-center align-top">{h.severity || 1}</td>
-                                    <td className={`border border-black p-2 text-center align-top font-bold ${(h.riskScore || 1) >= 15 ? 'text-red-600' :
-                                        (h.riskScore || 1) >= 8 ? 'text-orange-600' : 'text-black'
+                                    <td className={`border border-black p-2 text-center align-top font-bold ${(h.initialRisk || 1) >= 15 ? 'text-red-600' :
+                                        (h.initialRisk || 1) >= 8 ? 'text-orange-600' : 'text-black'
                                         }`}>
-                                        {h.riskScore || 1}
+                                        {h.initialRisk || 1}
                                     </td>
                                 </tr>
                             ))
