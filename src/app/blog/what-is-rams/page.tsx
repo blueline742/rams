@@ -16,7 +16,7 @@ export default function WhatIsRAMSPage() {
     <article className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <nav className="mb-8 text-sm text-gray-600">
+        <nav className="mb-8 text-sm text-gray-800">
           <Link href="/" className="hover:text-blue-600">Home</Link>
           <span className="mx-2">/</span>
           <Link href="/blog" className="hover:text-blue-600">Blog</Link>
@@ -29,10 +29,10 @@ export default function WhatIsRAMSPage() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             What is a RAMS Document? Complete UK Guide 2025
           </h1>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-xl text-gray-800 mb-6">
             Everything UK tradespeople need to know about risk assessment method statements
           </p>
-          <div className="flex items-center text-sm text-gray-500">
+          <div className="flex items-center text-sm text-gray-700">
             <time dateTime="2025-01-02">Updated January 2025</time>
             <span className="mx-2">•</span>
             <span>8 min read</span>
@@ -44,21 +44,21 @@ export default function WhatIsRAMSPage() {
 
           {/* Introduction */}
           <section className="mb-12">
-            <p className="text-xl text-gray-700 leading-relaxed mb-4">
+            <p className="text-xl text-gray-900 leading-relaxed mb-4">
               Picture this: You've just landed a major contract on a commercial site. Everything's sorted—tools, materials, team. Then the site manager asks for your RAMS document. You freeze. You don't have one.
             </p>
 
-            <p className="text-xl text-gray-700 leading-relaxed mb-4">
+            <p className="text-xl text-gray-900 leading-relaxed mb-4">
               Within minutes, you're off the job. The contract goes to someone else. This scenario plays out daily across UK construction sites.
             </p>
 
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+            <p className="text-xl text-gray-900 leading-relaxed mb-6">
               A <strong>RAMS document</strong> (Risk Assessment and Method Statement) is a legal document that outlines the hazards involved in your work and the safe methods you'll use to complete it. In 2025, it's not optional—it's essential for any tradesperson working on commercial sites, local authority projects, or larger residential jobs.
             </p>
 
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
               <p className="font-semibold text-gray-900 mb-2">Need a RAMS document today?</p>
-              <p className="text-gray-700 mb-4">Create a professional, trade-specific RAMS document in under 5 minutes.</p>
+              <p className="text-gray-900 mb-4">Create a professional, trade-specific RAMS document in under 5 minutes.</p>
               <Link
                 href="/create"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors no-underline"
@@ -80,20 +80,20 @@ export default function WhatIsRAMSPage() {
 
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
               <h4 className="text-xl font-semibold text-gray-900 mb-3">1. Risk Assessment (RA)</h4>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-900 mb-4">
                 The <strong>risk assessment</strong> identifies potential hazards in your work environment and evaluates the likelihood and severity of harm. It covers everything from working at height to electrical hazards, manual handling risks, and environmental dangers.
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-900">
                 Under the Health and Safety at Work Act 1974 and Management of Health and Safety at Work Regulations 1999, UK employers and self-employed tradespeople must conduct risk assessments for their work activities.
               </p>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
               <h4 className="text-xl font-semibold text-gray-900 mb-3">2. Method Statement (MS)</h4>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-900 mb-4">
                 The <strong>method statement</strong> is your step-by-step plan for completing the work safely. It details the specific procedures, equipment, and control measures you'll implement to eliminate or reduce the risks identified in your risk assessment.
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-900">
                 Think of it as your safety playbook—it tells everyone on site exactly how the job will be done, from start to finish, in the safest way possible.
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function WhatIsRAMSPage() {
 
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
               <p className="font-semibold text-gray-900 mb-2">Legal Alert</p>
-              <p className="text-gray-700">
+              <p className="text-gray-900">
                 The Health and Safety Executive (HSE) can issue improvement or prohibition notices if you fail to provide adequate risk assessments. Serious breaches can result in prosecution, with fines reaching £20,000 or more, and in severe cases, imprisonment.
               </p>
             </div>
@@ -442,7 +442,7 @@ export default function WhatIsRAMSPage() {
 
             <div className="bg-gray-100 rounded-lg p-6 mb-6">
               <h4 className="font-semibold text-gray-900 mb-3">What About Small Domestic Jobs?</h4>
-              <p className="text-gray-700 mb-3">
+              <p className="text-gray-900 mb-3">
                 While <strong>RAMS UK</strong> documentation isn't legally required for basic domestic work (like fitting a new bathroom in a private house), having one demonstrates professionalism and can:
               </p>
               <ul className="text-sm space-y-1">
@@ -470,7 +470,7 @@ export default function WhatIsRAMSPage() {
 
             <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-6">
               <p className="font-semibold text-gray-900 mb-2">The Traditional Method</p>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-900 mb-4">
                 Open Word or Excel, research HSE guidance, identify every hazard for your specific trade and job, evaluate risks, write control measures, create your method statement step by step, format everything professionally, ensure legal compliance with CDM 2015...
               </p>
               <ul className="space-y-2">
@@ -485,7 +485,7 @@ export default function WhatIsRAMSPage() {
 
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
               <p className="font-semibold text-gray-900 mb-2">The Template Approach</p>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-900 mb-4">
                 Download a <strong>method statement template</strong> from the internet, try to adapt it to your specific trade and job, hope it covers all legal requirements...
               </p>
               <ul className="space-y-2 mb-4">
@@ -494,7 +494,7 @@ export default function WhatIsRAMSPage() {
                 <li><strong>Pros:</strong> Starting structure provided, no upfront cost</li>
                 <li><strong>Cons:</strong> Usually generic and not trade-specific, may be outdated (pre-2015 regulations), often rejected by site managers, could miss critical hazards</li>
               </ul>
-              <p className="text-gray-700 font-semibold">
+              <p className="text-gray-900 font-semibold">
                 Warning: Many free templates online are dangerously generic or don't comply with current <strong>RAMS UK</strong> regulations. Site managers can spot these a mile away.
               </p>
             </div>
@@ -503,7 +503,7 @@ export default function WhatIsRAMSPage() {
 
             <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-6">
               <p className="font-semibold text-gray-900 mb-2">The Modern Solution</p>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-900 mb-4">
                 Use a specialist service like <strong>FastRAMS</strong> that generates trade-specific, legally compliant <strong>risk assessment method statements</strong> in minutes.
               </p>
               <ul className="space-y-2 mb-4">
@@ -514,7 +514,7 @@ export default function WhatIsRAMSPage() {
               </ul>
               <div className="bg-white rounded-lg p-4 mt-4">
                 <p className="font-semibold text-gray-900 mb-2">Cost Comparison:</p>
-                <p className="text-sm text-gray-700">
+                <p className="text-sm text-gray-900">
                   If your day rate is £250 and you spend 4 hours creating a RAMS from scratch, that costs you £125 in lost earnings. A £5 FastRAMS document saves you £120 and gets you on site earning money instead of doing paperwork.
                 </p>
               </div>
@@ -568,7 +568,7 @@ export default function WhatIsRAMSPage() {
           <div className="bg-blue-50 border-2 border-blue-600 rounded-lg p-8 my-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Ready to Create Your RAMS?</h3>
             <div className="text-center mb-6">
-              <p className="text-lg text-gray-700 mb-2">Professional, trade-specific RAMS documents in 5 minutes</p>
+              <p className="text-lg text-gray-900 mb-2">Professional, trade-specific RAMS documents in 5 minutes</p>
               <p className="text-3xl font-bold text-blue-600 mb-4">£5 per document</p>
               <Link
                 href="/create"
@@ -577,7 +577,7 @@ export default function WhatIsRAMSPage() {
                 Generate Your RAMS Now
               </Link>
             </div>
-            <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700 mt-6">
+            <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-900 mt-6">
               <div className="text-center">
                 <div className="text-2xl mb-2">⚡</div>
                 <p className="font-semibold">5-Minute Generation</p>
@@ -604,70 +604,70 @@ export default function WhatIsRAMSPage() {
             <div className="space-y-6">
               <div className="border-l-4 border-red-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">1. Using Generic Templates Unchanged</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-900 mb-2">
                   Downloading a <strong>method statement template</strong> and not customising it is obvious. If your RAMS says "insert company name here" or lists hazards irrelevant to your trade, it will be rejected immediately.
                 </p>
-                <p className="text-sm text-gray-600 italic">
+                <p className="text-sm text-gray-800 italic">
                   Fix: Always customise to your specific trade, company, and the actual work being performed.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Outdated Regulations</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-900 mb-2">
                   Many free templates online reference old regulations. The Construction (Design and Management) Regulations changed in 2015. If your <strong>RAMS document</strong> references CDM 2007, it's out of date.
                 </p>
-                <p className="text-sm text-gray-600 italic">
+                <p className="text-sm text-gray-800 italic">
                   Fix: Ensure your RAMS references CDM 2015 and current HSE guidance.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">3. Missing Trade-Specific Hazards</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-900 mb-2">
                   A builder's RAMS shouldn't look like an electrician's. Each trade has unique hazards. If you're an electrician and your <strong>risk assessment method statement</strong> doesn't mention arc flash or isolation procedures, it's inadequate.
                 </p>
-                <p className="text-sm text-gray-600 italic">
+                <p className="text-sm text-gray-800 italic">
                   Fix: Use trade-specific documentation that covers your actual work hazards.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">4. Vague Method Statements</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-900 mb-2">
                   Saying "work will be carried out safely" isn't a method statement. You need specific, step-by-step procedures. How exactly will you isolate electrical supplies? What's your working-at-height procedure?
                 </p>
-                <p className="text-sm text-gray-600 italic">
+                <p className="text-sm text-gray-800 italic">
                   Fix: Include detailed, sequential steps for how work will be completed safely.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">5. Missing Legal Requirements</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-900 mb-2">
                   <strong>RAMS UK</strong> documents must include risk ratings, control measures, PPE requirements, emergency procedures, and competent person details. Missing sections = rejected document.
                 </p>
-                <p className="text-sm text-gray-600 italic">
+                <p className="text-sm text-gray-800 italic">
                   Fix: Use a comprehensive template or service that includes all mandatory sections.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">6. Unrealistic Control Measures</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-900 mb-2">
                   Saying you'll have a full-time safety supervisor when you're a sole trader isn't credible. Your control measures must be realistic for your business size and the actual job.
                 </p>
-                <p className="text-sm text-gray-600 italic">
+                <p className="text-sm text-gray-800 italic">
                   Fix: Be honest and practical about controls you can actually implement.
                 </p>
               </div>
 
               <div className="border-l-4 border-red-500 pl-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">7. Never Reviewed or Updated</h3>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-900 mb-2">
                   A <strong>RAMS document</strong> dated 2018 suggests you haven't reviewed your safety procedures in years. RAMS should be reviewed annually or when work methods change.
                 </p>
-                <p className="text-sm text-gray-600 italic">
+                <p className="text-sm text-gray-800 italic">
                   Fix: Keep RAMS current with review dates within the last 12 months.
                 </p>
               </div>
@@ -675,7 +675,7 @@ export default function WhatIsRAMSPage() {
 
             <div className="bg-blue-50 rounded-lg p-6 mt-8">
               <p className="font-semibold text-gray-900 mb-2">Pro Tip:</p>
-              <p className="text-gray-700">
+              <p className="text-gray-900">
                 The best <strong>RAMS documents</strong> are specific, realistic, and actually useful on site. If your team can't follow it in practice, or if a site manager spots it's generic, you've wasted your time. Quality matters more than speed—unless you use a professional service that delivers both.
               </p>
             </div>
@@ -688,28 +688,28 @@ export default function WhatIsRAMSPage() {
             <div className="space-y-6">
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">How long does a RAMS document last?</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-900">
                   A <strong>RAMS document</strong> should be reviewed at least annually or whenever there are significant changes to work methods, equipment, or regulations. Most site managers expect to see a review date within the last 12 months. If your working methods haven't changed and regulations remain the same, you can continue using the same RAMS with an updated review date. However, for each new project, you should review whether the RAMS is appropriate for that specific site and work.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Do I need a new RAMS for every job?</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-900">
                   Not necessarily. If you're doing the same type of work repeatedly (for example, domestic electrical installations), you can use the same <strong>risk assessment method statement</strong> for multiple jobs. However, you must review it for each site to ensure it's appropriate. If a new site has unique hazards (confined spaces, working at height, asbestos risk), you need to update or create a new RAMS. Major commercial contracts typically require a site-specific RAMS.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Can I use the same RAMS template for different trades?</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-900">
                   No. This is one of the most common mistakes. A <strong>RAMS document</strong> must be trade-specific because different trades have completely different hazards. An electrician's RAMS covering electrical isolation and arc flash risks is not appropriate for a plumber dealing with hot water and legionella risks. Site managers will reject generic or wrong-trade <strong>RAMS UK</strong> documents. Always use a <strong>method statement template</strong> designed for your specific trade.
                 </p>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">What's the penalty for not having a RAMS document?</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-900">
                   Immediate consequences include being refused site access (losing that day's earnings) and likely being removed from the contractor's approved list. Legally, if the HSE investigates following an incident and you have no adequate <strong>risk assessment method statement</strong>, you face improvement or prohibition notices, fines up to £20,000 or more, and potential criminal prosecution. Your insurance may also refuse claims if you didn't have proper health and safety documentation. The financial and legal risks far outweigh the small cost and time of creating proper RAMS.
                 </p>
               </div>
@@ -762,7 +762,7 @@ export default function WhatIsRAMSPage() {
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Get Your Professional RAMS Document Today</h2>
 
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-gray-900 mb-4">
               In 2025, a professional <strong>RAMS document</strong> isn't optional—it's essential business equipment for any UK tradesperson. Whether you're an electrician, plumber, builder, or specialist contractor, having proper <strong>risk assessment method statements</strong> ready means you can:
             </p>
 
@@ -789,7 +789,7 @@ export default function WhatIsRAMSPage() {
               </li>
             </ul>
 
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-900 mb-6">
               Don't waste hours creating RAMS from scratch or risk rejection with generic templates. <strong>FastRAMS</strong> generates professional, trade-specific, legally compliant <strong>RAMS UK</strong> documentation in just 5 minutes—for only £5.
             </p>
 
@@ -841,11 +841,11 @@ export default function WhatIsRAMSPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <Link href="/blog" className="block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h3 className="font-semibold text-gray-900 mb-2">CDM 2015 Regulations Explained</h3>
-              <p className="text-sm text-gray-600">Understanding your legal obligations under Construction Design and Management regulations</p>
+              <p className="text-sm text-gray-800">Understanding your legal obligations under Construction Design and Management regulations</p>
             </Link>
             <Link href="/blog" className="block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h3 className="font-semibold text-gray-900 mb-2">Trade-Specific RAMS Templates</h3>
-              <p className="text-sm text-gray-600">Find the right RAMS documentation for your specific trade and work type</p>
+              <p className="text-sm text-gray-800">Find the right RAMS documentation for your specific trade and work type</p>
             </Link>
           </div>
         </aside>
