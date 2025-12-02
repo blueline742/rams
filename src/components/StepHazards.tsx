@@ -85,8 +85,8 @@ export default function StepHazards({ trade, selectedHazards, onToggle, onContro
                                                         onChange={(e) => {
                                                             const likelihood = parseInt(e.target.value);
                                                             const severity = selectedItem.severity || 1;
-                                                            const riskScore = likelihood * severity;
-                                                            onHazardUpdate(item.hazard, { likelihood, severity, riskScore });
+                                                            const initialRisk = likelihood * severity;
+                                                            onHazardUpdate(item.hazard, { likelihood, severity, initialRisk });
                                                         }}
                                                         className="w-full p-1 text-sm border rounded"
                                                     >
@@ -104,8 +104,8 @@ export default function StepHazards({ trade, selectedHazards, onToggle, onContro
                                                         onChange={(e) => {
                                                             const severity = parseInt(e.target.value);
                                                             const likelihood = selectedItem.likelihood || 1;
-                                                            const riskScore = likelihood * severity;
-                                                            onHazardUpdate(item.hazard, { likelihood, severity, riskScore });
+                                                            const initialRisk = likelihood * severity;
+                                                            onHazardUpdate(item.hazard, { likelihood, severity, initialRisk });
                                                         }}
                                                         className="w-full p-1 text-sm border rounded"
                                                     >
@@ -118,10 +118,10 @@ export default function StepHazards({ trade, selectedHazards, onToggle, onContro
                                                 </div>
                                                 <div className="text-center">
                                                     <label className="block text-xs font-bold text-gray-500 uppercase mb-1">Risk Score</label>
-                                                    <div className={`font-bold text-lg ${(selectedItem.riskScore || 1) >= 15 ? 'text-red-600' :
-                                                        (selectedItem.riskScore || 1) >= 8 ? 'text-orange-500' : 'text-green-600'
+                                                    <div className={`font-bold text-lg ${(selectedItem.initialRisk || 1) >= 15 ? 'text-red-600' :
+                                                        (selectedItem.initialRisk || 1) >= 8 ? 'text-orange-500' : 'text-green-600'
                                                         }`}>
-                                                        {selectedItem.riskScore || 1}
+                                                        {selectedItem.initialRisk || 1}
                                                     </div>
                                                 </div>
                                             </div>
