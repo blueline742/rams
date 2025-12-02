@@ -233,7 +233,7 @@ export default function Home() {
           <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
             <div className="p-8 text-center bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
               <h3 className="text-2xl font-bold mb-2">Pay Per Document</h3>
-              <div className="text-5xl font-extrabold mb-2">£5<span className="text-xl font-normal opacity-80">/doc</span></div>
+              <div className="text-5xl font-extrabold mb-2">£12.99<span className="text-xl font-normal opacity-80">/doc</span></div>
               <p className="opacity-90">VAT included</p>
             </div>
             <div className="p-8">
