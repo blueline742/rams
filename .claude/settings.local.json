@@ -3,7 +3,14 @@
     "allow": [
       "Bash(cat:*)",
       "Bash(npm run dev:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd InstantRAMS application with Stripe integration\n\n- Implemented landing page with hero, features, and pricing sections\n- Created multi-step wizard for RAMS document generation\n- Added trade-specific hazard data for 18+ trades\n- Integrated client-side PDF generation with jspdf\n- Set up Stripe checkout API route for payments\n- Added success page and live document preview\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(gh --version:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []
