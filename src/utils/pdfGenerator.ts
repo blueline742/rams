@@ -373,25 +373,25 @@ export const generatePDF = (
         content: getRiskRating(initialRisk),
         styles: {
           fillColor: getRiskColor(initialRisk),
-          textColor: initialRisk >= 8 ? [255, 255, 255] : [0, 0, 0],
-          fontStyle: 'bold',
-          halign: 'center',
+          textColor: (initialRisk >= 8 ? [255, 255, 255] : [0, 0, 0]) as [number, number, number],
+          fontStyle: 'bold' as const,
+          halign: 'center' as const,
         },
       },
       {
         content: getRiskRating(residualRisk),
         styles: {
           fillColor: getRiskColor(residualRisk),
-          textColor: residualRisk >= 8 ? [255, 255, 255] : [0, 0, 0],
-          fontStyle: 'bold',
-          halign: 'center',
+          textColor: (residualRisk >= 8 ? [255, 255, 255] : [0, 0, 0]) as [number, number, number],
+          fontStyle: 'bold' as const,
+          halign: 'center' as const,
         },
       },
     ];
   });
 
   if (hazardTableData.length === 0) {
-    hazardTableData.push(['No hazards selected', 'N/A', { content: '-', styles: { halign: 'center' } }, { content: '-', styles: { halign: 'center' } }]);
+    hazardTableData.push(['No hazards selected', 'N/A', '-', '-']);
   }
 
   autoTable(doc, {
