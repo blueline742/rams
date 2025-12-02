@@ -105,7 +105,7 @@ export default function BlogPage() {
             href="/create"
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-50 transition-all shadow-lg transform hover:-translate-y-1"
           >
-            Create RAMS Now - £5
+            Create RAMS Now - £12.99
           </Link>
           <p className="text-sm text-blue-200 mt-4">No subscription • Instant PDF download • Pay only when satisfied</p>
         </div>

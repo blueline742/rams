@@ -224,7 +224,7 @@ export default function Wizard() {
                                     : 'bg-blue-600 text-white hover:bg-blue-700'
                                     }`}
                             >
-                                {step === 6 ? 'Buy Now (£5)' : 'Next'}
+                                {step === 6 ? 'Buy Now (£12.99)' : 'Next'}
                             </button>
                         </div>
                     </div>

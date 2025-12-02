@@ -277,7 +277,7 @@ export default function Home() {
           >
             Create RAMS Now
           </Link>
-          <p className="mt-6 text-blue-200 text-sm">No subscription required • £5 per document</p>
+          <p className="mt-6 text-blue-200 text-sm">No subscription required • £12.99 per document</p>
         </div>
       </section>
 

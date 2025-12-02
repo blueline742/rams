@@ -23,7 +23,7 @@ export async function POST(request: Request) {
               name: `RAMS Document - ${trade}`,
               description: 'Instant PDF Download',
             },
-            unit_amount: 500, // £5.00
+            unit_amount: 1299, // £12.99
           },
           quantity: 1,
         },

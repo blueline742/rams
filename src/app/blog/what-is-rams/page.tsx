@@ -63,7 +63,7 @@ export default function WhatIsRAMSPage() {
                 href="/create"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors no-underline"
               >
-                Generate Your RAMS Now - £5
+                Generate Your RAMS Now - £12.99
               </Link>
             </div>
           </section>
@@ -204,7 +204,7 @@ export default function WhatIsRAMSPage() {
               href="/create"
               className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors no-underline text-lg"
             >
-              Create Your RAMS - £5
+              Create Your RAMS - £12.99
             </Link>
           </div>
 
@@ -508,14 +508,14 @@ export default function WhatIsRAMSPage() {
               </p>
               <ul className="space-y-2 mb-4 text-gray-900">
                 <li><strong>Time required:</strong> 5-10 minutes</li>
-                <li><strong>Cost:</strong> £5 per document</li>
+                <li><strong>Cost:</strong> £12.99 per document</li>
                 <li><strong>Pros:</strong> Trade-specific content, legally compliant with CDM 2015, professionally formatted, accepted by major contractors, includes all required sections, instant download</li>
                 <li><strong>Cons:</strong> Small cost (but saves hours of your time)</li>
               </ul>
               <div className="bg-white rounded-lg p-4 mt-4">
                 <p className="font-semibold text-gray-900 mb-2">Cost Comparison:</p>
                 <p className="text-sm text-gray-900">
-                  If your day rate is £250 and you spend 4 hours creating a RAMS from scratch, that costs you £125 in lost earnings. A £5 FastRAMS document saves you £120 and gets you on site earning money instead of doing paperwork.
+                  If your day rate is £250 and you spend 4 hours creating a RAMS from scratch, that costs you £125 in lost earnings. A £12.99 FastRAMS document saves you £112+ and gets you on site earning money instead of doing paperwork.
                 </p>
               </div>
             </div>
@@ -569,7 +569,7 @@ export default function WhatIsRAMSPage() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Ready to Create Your RAMS?</h3>
             <div className="text-center mb-6">
               <p className="text-lg text-white mb-2">Professional, trade-specific RAMS documents in 5 minutes</p>
-              <p className="text-3xl font-bold text-blue-600 mb-4">£5 per document</p>
+              <p className="text-3xl font-bold text-blue-600 mb-4">£12.99 per document</p>
               <Link
                 href="/create"
                 className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline text-lg"
@@ -790,13 +790,13 @@ export default function WhatIsRAMSPage() {
             </ul>
 
             <p className="text-lg text-white mb-6">
-              Don't waste hours creating RAMS from scratch or risk rejection with generic templates. <strong>FastRAMS</strong> generates professional, trade-specific, legally compliant <strong>RAMS UK</strong> documentation in just 5 minutes—for only £5.
+              Don't waste hours creating RAMS from scratch or risk rejection with generic templates. <strong>FastRAMS</strong> generates professional, trade-specific, legally compliant <strong>RAMS UK</strong> documentation in just 5 minutes—for only £12.99.
             </p>
 
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Create Your RAMS Document in 5 Minutes</h3>
               <p className="text-lg mb-2 text-blue-50">Professional • Trade-Specific • Legally Compliant</p>
-              <p className="text-3xl font-bold mb-6">£5 per document</p>
+              <p className="text-3xl font-bold mb-6">£12.99 per document</p>
               <Link
                 href="/create"
                 className="inline-block bg-white text-blue-600 px-10 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors no-underline text-lg mb-4"
