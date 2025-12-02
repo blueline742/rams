@@ -568,7 +568,7 @@ export default function WhatIsRAMSPage() {
           <div className="bg-blue-50 border-2 border-blue-600 rounded-lg p-8 my-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Ready to Create Your RAMS?</h3>
             <div className="text-center mb-6">
-              <p className="text-lg text-white mb-2">Professional, trade-specific RAMS documents in 5 minutes</p>
+              <p className="text-lg text-gray-900 mb-2">Professional, trade-specific RAMS documents in 5 minutes</p>
               <p className="text-3xl font-bold text-blue-600 mb-4">£12.99 per document</p>
               <Link
                 href="/create"
@@ -577,7 +577,7 @@ export default function WhatIsRAMSPage() {
                 Generate Your RAMS Now
               </Link>
             </div>
-            <div className="grid md:grid-cols-3 gap-4 text-sm text-white mt-6">
+            <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-900 mt-6">
               <div className="text-center">
                 <div className="text-2xl mb-2">⚡</div>
                 <p className="font-semibold">5-Minute Generation</p>
