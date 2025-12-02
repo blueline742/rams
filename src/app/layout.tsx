@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
+// Trigger deployment refresh
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
