@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
 import StepTrade from './StepTrade';
 import StepHazards from './StepHazards';
 import StepPPE from './StepPPE';
@@ -91,23 +90,22 @@ export default function Wizard() {
         }));
 
         try {
-            const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || 'pk_test_placeholder');
-
             const response = await fetch('/api/checkout', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ trade: selectedTrade }),
             });
 
-            const { sessionId, error } = await response.json();
+            const { url, error } = await response.json();
 
             if (error) {
                 alert('Payment Error: ' + error);
                 return;
             }
 
-            if (stripe) {
-                await (stripe as any).redirectToCheckout({ sessionId });
+            if (url) {
+                // Redirect to Stripe Checkout using the URL
+                window.location.href = url;
             }
         } catch (err) {
             console.error('Checkout Error:', err);
