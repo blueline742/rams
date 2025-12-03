@@ -47,13 +47,7 @@ function SuccessContent() {
         </div>
 
         <h1 className="text-3xl font-bold text-gray-900 mb-3">Payment Successful!</h1>
-        <p className="text-gray-600 mb-2">Thank you for your purchase. Your RAMS document is ready to download.</p>
-
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 mt-4">
-          <p className="text-sm text-blue-800">
-            📧 <strong>A copy has been emailed to you</strong> (check your spam folder if you don't see it within 5 minutes)
-          </p>
-        </div>
+        <p className="text-gray-600 mb-8">Thank you for your purchase. Your RAMS document is ready to download.</p>
 
         <button
           onClick={handleDownload}
