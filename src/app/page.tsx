@@ -129,7 +129,7 @@ export default function Home() {
           </h1>
 
           <p className="text-xl text-slate-600 mb-6 max-w-2xl mx-auto leading-relaxed">
-            Create fully compliant Risk Assessments and Method Statements in 10 minutes.
+            Generate professional RAMS templates in 10 minutes. For experienced tradespeople who understand their hazards but hate the paperwork.
             <span className="font-semibold text-slate-900"> Only £12.99</span> — no subscription, no hassle.
           </p>
 
@@ -159,7 +159,7 @@ export default function Home() {
 
           <div className="mt-16 flex justify-center gap-8 text-slate-400 grayscale opacity-70">
             {/* Logos could go here */}
-            <div className="flex items-center gap-2"><Shield size={20} /> HSE Compliant</div>
+            <div className="flex items-center gap-2"><Shield size={20} /> Based on HSE Guidelines</div>
             <div className="flex items-center gap-2"><FileText size={20} /> PDF Export</div>
             <div className="flex items-center gap-2"><Zap size={20} /> Instant Delivery</div>
           </div>
@@ -269,7 +269,7 @@ export default function Home() {
                   <td className="p-4 text-center"><X className="h-5 w-5 text-slate-400 mx-auto" /></td>
                 </tr>
                 <tr className="border-b border-slate-100">
-                  <td className="p-4 font-medium text-slate-700">HSE compliant</td>
+                  <td className="p-4 font-medium text-slate-700">Based on HSE guidelines</td>
                   <td className="p-4 text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
                   <td className="p-4 text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
                 </tr>
@@ -308,8 +308,8 @@ export default function Home() {
                 {[
                   'Preview for FREE before paying',
                   'Instant PDF Download',
-                  'Fully HSE Compliant',
-                  'Professional Formatting',
+                  'Professional Templates Based on HSE Guidelines',
+                  'Editable for Your Specific Site',
                   '7-Day Money-Back Guarantee',
                   'No Account or Subscription Required'
                 ].map((item, i) => (
@@ -354,7 +354,7 @@ export default function Home() {
           >
             Create Your RAMS Now →
           </Link>
-          <p className="mt-6 text-blue-200 text-sm">100% Money-Back Guarantee • HSE Compliant • Instant Download</p>
+          <p className="mt-6 text-blue-200 text-sm">100% Money-Back Guarantee • Based on HSE Guidelines • Instant Download</p>
         </div>
       </section>
 

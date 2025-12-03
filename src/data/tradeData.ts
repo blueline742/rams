@@ -530,29 +530,6 @@ export const tradeData: TradeData = {
       '10. Commission the system.'
     ]
   },
-  'Tree Surgeon': {
-    hazards: [
-      { hazard: 'Chainsaw Injuries', controlMeasure: 'Wear chainsaw trousers/boots; hold correct certification (CS30/31); maintain saw.' },
-      { hazard: 'Falls from Height', controlMeasure: 'Use climbing ropes/harness; aerial rescue plan in place.' },
-      { hazard: 'Falling Timber', controlMeasure: 'Use lowering ropes; clear drop zone; communication with ground staff.' },
-      { hazard: 'Flying Debris (Chipping)', controlMeasure: 'Wear visor/goggles; exclusion zone around chipper.' },
-      { hazard: 'Noise', controlMeasure: 'Wear ear defenders/helmet comms.' }
-    ],
-    ppe: ['Chainsaw Helmet (Visor/Muffs)', 'Chainsaw Trousers (Class 1/2)', 'Chainsaw Boots', 'Gloves', 'Hi-Vis'],
-    tools: ['Chainsaw (Top/Rear handle)', 'Woodchipper', 'Climbing Rope', 'Harness', 'Handsaw', 'Lowering Ropes', 'First Aid Kit'],
-    sequence: [
-      '1. Arrive on site and carry out wildlife check (nesting birds).',
-      '2. Set up exclusion zones and signage.',
-      '3. Climber ascends tree using rope and harness.',
-      '4. Ground staff prepare lowering ropes.',
-      '5. Remove branches systematically (cut and hold).',
-      '6. Lower large limbs safely to the drop zone.',
-      '7. Ground staff process timber (chip or log).',
-      '8. Fell the main trunk (if removal) or shape crown.',
-      '9. Clear all debris and blow down the area.',
-      '10. Remove equipment and sign off.'
-    ]
-  },
   'Cladding Installer': {
     hazards: [
       { hazard: 'Falls from Height', controlMeasure: 'Use scaffolding with edge protection; wear harness when needed.', likelihood: 3, severity: 5, initialRisk: 15, residualRisk: 3 },
