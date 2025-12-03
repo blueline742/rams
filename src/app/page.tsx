@@ -122,32 +122,40 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-tight">
-            Professional RAMS <br />
+            Stop Wasting 4+ Hours <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              Generated in Minutes
+              Writing RAMS Documents
             </span>
           </h1>
 
-          <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Create fully compliant Risk Assessments and Method Statements instantly.
-            Trusted by UK tradespeople to secure contracts and ensure safety with FastRAMS.
+          <p className="text-xl text-slate-600 mb-6 max-w-2xl mx-auto leading-relaxed">
+            Create fully compliant Risk Assessments and Method Statements in 10 minutes.
+            <span className="font-semibold text-slate-900"> Only £12.99</span> — no subscription, no hassle.
           </p>
+
+          <div className="flex items-center justify-center gap-4 mb-10 flex-wrap">
+            <div className="flex items-center gap-2 text-green-700 bg-green-50 px-4 py-2 rounded-full border border-green-200">
+              <CheckCircle className="h-5 w-5" />
+              <span className="text-sm font-semibold">Trusted by 50+ UK Trades</span>
+            </div>
+            <div className="flex items-center gap-2 text-blue-700 bg-blue-50 px-4 py-2 rounded-full border border-blue-200">
+              <Shield className="h-5 w-5" />
+              <span className="text-sm font-semibold">100% Money-Back Guarantee</span>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/create"
-              className="group bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-300 flex items-center gap-2"
+              className="group bg-blue-600 text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-300 flex items-center gap-2 animate-pulse hover:animate-none"
             >
-              Start Now - No Sign Up
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href="#how-it-works"
-              className="text-slate-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-slate-50 transition-all flex items-center gap-2"
-            >
-              View Sample
+              Create Your RAMS Now - £12.99
+              <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
+          <p className="mt-4 text-sm text-slate-500">
+            Preview for free • Pay only when satisfied • Instant download
+          </p>
 
           <div className="mt-16 flex justify-center gap-8 text-slate-400 grayscale opacity-70">
             {/* Logos could go here */}
@@ -220,64 +228,133 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Comparison Section */}
+      <section className="py-20 bg-white border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Why Choose FastRAMS?</h2>
+            <p className="text-slate-600">Compare us to other RAMS providers</p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="border-b-2 border-slate-200">
+                  <th className="text-left p-4 font-semibold text-slate-700">Feature</th>
+                  <th className="p-4 text-center">
+                    <div className="font-bold text-blue-600 text-lg">FastRAMS</div>
+                  </th>
+                  <th className="p-4 text-center text-slate-500">Other Providers</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm">
+                <tr className="border-b border-slate-100">
+                  <td className="p-4 font-medium text-slate-700">Price per document</td>
+                  <td className="p-4 text-center font-bold text-green-600">£12.99</td>
+                  <td className="p-4 text-center text-slate-500">£30-50/month</td>
+                </tr>
+                <tr className="border-b border-slate-100 bg-slate-50">
+                  <td className="p-4 font-medium text-slate-700">Time to create</td>
+                  <td className="p-4 text-center font-bold text-green-600">10 minutes</td>
+                  <td className="p-4 text-center text-slate-500">1-4 hours</td>
+                </tr>
+                <tr className="border-b border-slate-100">
+                  <td className="p-4 font-medium text-slate-700">Account required</td>
+                  <td className="p-4 text-center font-bold text-green-600">No</td>
+                  <td className="p-4 text-center text-slate-500">Yes</td>
+                </tr>
+                <tr className="border-b border-slate-100 bg-slate-50">
+                  <td className="p-4 font-medium text-slate-700">Instant download</td>
+                  <td className="p-4 text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 text-center"><X className="h-5 w-5 text-slate-400 mx-auto" /></td>
+                </tr>
+                <tr className="border-b border-slate-100">
+                  <td className="p-4 font-medium text-slate-700">HSE compliant</td>
+                  <td className="p-4 text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="p-4 font-medium text-slate-700">Money-back guarantee</td>
+                  <td className="p-4 text-center"><CheckCircle className="h-5 w-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 text-center"><X className="h-5 w-5 text-slate-400 mx-auto" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              No subscriptions, no hidden fees. Just pay as you go.
+              No subscriptions, no hidden fees. Pay only when you need a document.
             </p>
           </div>
 
-          <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
+          <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-blue-200">
+            <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white text-center py-2 text-sm font-semibold">
+              💷 Save £200+ per year vs. subscription services
+            </div>
             <div className="p-8 text-center bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
               <h3 className="text-2xl font-bold mb-2">Pay Per Document</h3>
               <div className="text-5xl font-extrabold mb-2">£12.99<span className="text-xl font-normal opacity-80">/doc</span></div>
-              <p className="opacity-90">VAT included</p>
+              <p className="opacity-90">VAT included • One-time payment</p>
             </div>
             <div className="p-8">
               <ul className="space-y-4 mb-8">
                 {[
-                  'Unlimited Edits before purchase',
+                  'Preview for FREE before paying',
                   'Instant PDF Download',
                   'Fully HSE Compliant',
                   'Professional Formatting',
-                  'Secure Stripe Payment'
+                  '7-Day Money-Back Guarantee',
+                  'No Account or Subscription Required'
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-slate-600">
                     <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    {item}
+                    <span className="text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 href="/create"
-                className="block w-full bg-slate-900 text-white text-center py-4 rounded-xl font-bold hover:bg-slate-800 transition-all"
+                className="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-4 rounded-xl font-bold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                Create Document Now
+                Get Started Now - £12.99
               </Link>
+              <p className="text-center text-xs text-slate-500 mt-4">
+                Secure payment via Stripe • Takes 10 minutes
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-blue-600 text-white overflow-hidden relative">
+      <section className="py-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white overflow-hidden relative">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6">Ready to create your document?</h2>
-          <p className="text-blue-100 text-xl mb-10">
-            Join thousands of tradespeople who save time and win work with FastRAMS.
-            Pay only when you're happy with the preview.
+          <div className="inline-block bg-yellow-400 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-6 animate-bounce">
+            ⚡ Stop Wasting Time on RAMS Paperwork
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Need a RAMS Document for Monday?<br />
+            <span className="text-yellow-300">Get It Done in 10 Minutes</span>
+          </h2>
+          <p className="text-blue-100 text-xl mb-10 max-w-2xl mx-auto">
+            No account setup. No subscription traps. Just fill in your details, preview for free,
+            and download instantly for <span className="font-bold text-white">only £12.99</span>.
           </p>
           <Link
             href="/create"
-            className="inline-block bg-white text-blue-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-blue-50 transition-all shadow-lg transform hover:-translate-y-1"
+            className="inline-block bg-white text-blue-600 px-12 py-5 rounded-full text-xl font-bold hover:bg-yellow-300 hover:text-slate-900 transition-all shadow-2xl transform hover:-translate-y-1 hover:scale-105"
           >
-            Create RAMS Now
+            Create Your RAMS Now →
           </Link>
-          <p className="mt-6 text-blue-200 text-sm">No subscription required • £12.99 per document</p>
+          <p className="mt-6 text-blue-200 text-sm">100% Money-Back Guarantee • HSE Compliant • Instant Download</p>
         </div>
       </section>
 
