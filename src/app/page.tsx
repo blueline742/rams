@@ -429,7 +429,7 @@ export default function Home() {
               © {new Date().getFullYear()} FastRAMS. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
-              <span>HSE Compliant</span>
+              <span>Based on HSE Guidelines</span>
               <span>•</span>
               <span>CDM 2015</span>
               <span>•</span>
